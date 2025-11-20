@@ -1,0 +1,14 @@
+services:
+  web:
+    image: amuulakh/dockerexercise:v2
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    
+
+  db:
+    image: mongo:latest
+    command: --smallfiles
+    ports:
+      - "27017:27017"
